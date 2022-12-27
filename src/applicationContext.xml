@@ -33,6 +33,15 @@
     	<constructor-arg ref="myFortune" />
     </bean>
     
+    
+    <bean id="cricketCoach" 
+    class="com.prasad.springdemo.cricketCoach">
+    
+    	<!-- Setup the property for the setter injection -->
+    	<property name="fortuneService" ref="myFortune" />
+    </bean>
+    
+    
 </beans>
 
 
