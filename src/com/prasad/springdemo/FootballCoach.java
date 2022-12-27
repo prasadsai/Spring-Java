@@ -7,5 +7,11 @@ public class FootballCoach implements Coach{
 		// TODO Auto-generated method stub
 		return "Play FIFA everyday";
 	}
+
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

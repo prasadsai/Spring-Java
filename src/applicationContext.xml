@@ -18,9 +18,19 @@
     	<property name="rootLoggerLevel" value="FINE" />
     	<property name="printedLoggerLevel" value="FINE"/>
     </bean>
+    <!-- define the dependency -->
+    <bean id="myFortune" 
+    	class="com.prasad.springdemo.HappyFortuneService">
+   
+    </bean>
+    
+    
     
     <bean id="myCoach" 
-    	class="com.prasad.springdemo.FootballCoach">
+    	class="com.prasad.springdemo.TrackCoach">
+    	
+    	<!-- setup the constructor injection -->
+    	<constructor-arg ref="myFortune" />
     </bean>
     
 </beans>
