@@ -13,5 +13,13 @@ public class FootballCoach implements Coach{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public String getRandomFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
 	
 }

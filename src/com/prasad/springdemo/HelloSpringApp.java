@@ -21,6 +21,9 @@ public class HelloSpringApp {
 		//let's call out new method for fortunes
 		System.out.println(theCoach.getDailyFortune());
 		
+		//let's call random fortune
+		System.out.println(theCoach.getRandomFortune());
+		
 		//close the bean
 		context.close();
 
