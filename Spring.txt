@@ -1,0 +1,48 @@
+Spring
+
+Spring bean:
+	It is a java object.
+	When java objects are created by the spring container, then Spring refers to them as “Spring beans”.
+
+IOC - Inversion of Control
+	Create and manager Objects
+
+Dependency Injection
+	Inject object’s dependencies
+
+Spring Container - known as ApplicationContext
+	Java Annotations
+	Java source code
+	XML configuration (legacy)
+	
+Spring Development Process
+	Configure the Spring Beans
+	Create Spring Container
+	Retrieve Beans from Spring Container
+	
+Stateless beam?
+	where you don’t need to maintain any state
+
+
+Spring Bean Scopes
+Scope				Description
+Singleton			Create a single shared instance of the bean. Default scope. - best for stateless 
+Prototype			Creates a new bean instance for each container request. - best for stateful
+Request				Scoped to an HTTP web request. Only used for web apps.
+Session				Scoped to an HTTP web session. Only used for web apps.
+Global-session		Scoped to a global HTTP web session. Only used for web apps.
+
+Container requests?
+
+Bean lifecycle
+Container started -> Bean instantiated -> Dependencies Injected -> Internal Spring Processing(bean factory) -> Our Custom Init Method ->
+
+						Bean is ready for use -> Container is shutdown(context.close()) ->Custom Destry method(STOP).
+Bean Hooks:
+Custom code during bean initialization
+	calling custom business logic methods.
+	Setting handles to resources(bd, sockets, file etc)
+
+Custom code during bean destruction
+	calling custom business logic methods.
+	clean up handles to resources(bd, sockets, file etc)

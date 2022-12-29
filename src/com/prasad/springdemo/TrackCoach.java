@@ -26,4 +26,13 @@ public class TrackCoach implements Coach {
 		return fortuneService.getFortuneRandom();
 	}
 
+	//add an init method
+	public void doMyStartupStuff() {
+		System.out.println("TrackCoach: inside method doMyStartupStuff");
+	}
+	
+	//add an destroy method
+	public void doMyCleanupStuffDestroyed() {
+		System.out.println("TrackCoach: inside method doMyCleanupStuffDestroyed");
+	}
 }

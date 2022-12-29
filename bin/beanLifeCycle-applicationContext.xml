@@ -7,8 +7,6 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- load the properties file: sports.properties -->
-    <context:property-placeholder location="classpath:sport.properties"/>
     
     <!-- Define your beans here -->
     
@@ -27,17 +25,19 @@
     <!-- define the dependency -->
     <bean id="myFortune" 
     	class="com.prasad.springdemo.HappyFortuneService">
+   
     </bean>
     
-    
-    
+    <!-- default is singleton, if prototype is mentioned then it creates new object each reference the bean is called. -->
     <bean id="myCoach" 
-    	class="com.prasad.springdemo.FootballCoach">
+    	class="com.prasad.springdemo.FootballCoach" 
+    	init-method="doMyStartupStuff" 
+    	destroy-method="doMyCleanupStuffDestroyed"
+    	scope="prototype">
     	
     	<!-- setup the constructor injection -->
     	<constructor-arg ref="myFortune" />
     </bean>
-    
     
     <bean id="cricketCoach" 
     class="com.prasad.springdemo.cricketCoach">

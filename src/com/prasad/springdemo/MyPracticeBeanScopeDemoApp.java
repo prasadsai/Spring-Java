@@ -2,13 +2,13 @@ package com.prasad.springdemo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class BeanScopeDemoApp {
+public class MyPracticeBeanScopeDemoApp {
 
 	public static void main(String[] args) {
 		
 		//load the spring configuration file
 		ClassPathXmlApplicationContext context = 
-				new ClassPathXmlApplicationContext("beanScope-applicationContext.xml");
+				new ClassPathXmlApplicationContext("beanLifeCycle-applicationContext.xml");
 		
 		//retrieve bean from spring container
 		Coach theCoach = context.getBean("myCoach",Coach.class);
@@ -22,10 +22,16 @@ public class BeanScopeDemoApp {
 		
 		System.out.println("\nMemory location for alphaCoach: " + alphaCoach);
 		
+		System.out.println(theCoach.getDailyWorkout());
+		
 		//close the context
 		context.close();
-		
 
 	}
 
 }
+
+
+// First all the constructors and setters will be called 
+	//and then init-method and destroy methods will be called with internal processing in betweek
+

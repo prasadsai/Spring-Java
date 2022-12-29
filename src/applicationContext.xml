@@ -27,13 +27,12 @@
     <!-- define the dependency -->
     <bean id="myFortune" 
     	class="com.prasad.springdemo.HappyFortuneService">
-   
     </bean>
     
     
     
     <bean id="myCoach" 
-    	class="com.prasad.springdemo.TrackCoach">
+    	class="com.prasad.springdemo.FootballCoach">
     	
     	<!-- setup the constructor injection -->
     	<constructor-arg ref="myFortune" />
